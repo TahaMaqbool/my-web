@@ -1,0 +1,18 @@
+<form #heroForm="ngForm" (ngSubmit)="addHero(heroForm)" novalidate>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      class="form-control"
+      id="name"
+      [(ngModel)]="hero.name"
+      name="name"
+      placeholder="Enter name"
+      #name="ngModel"
+      required>
+    <div [hidden]="name.valid || name.pristine"
+         class="alert alert-danger">
+      Name is required
+    </div>
+  </div>
+  <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>

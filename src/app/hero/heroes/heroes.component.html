@@ -8,4 +8,7 @@
      </a>
   </li>
 </ul>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail>
+<div>
+  <a routerLink="/create" class="btn btn-default">Add Hero</a>
+</div>

@@ -10,7 +10,7 @@ import { HeroService } from '../hero.service';
 
 export class HeroesComponent implements OnInit {
   selectedHero: Hero;
-  heroes: Hero[];
+  heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) { }
 
@@ -25,6 +25,5 @@ export class HeroesComponent implements OnInit {
 
   selectHero(hero: Hero): void {
     this.selectedHero = hero;
-    // console.log('hero is: 1', this.selectedHero);
   }
 }

@@ -3,17 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesComponent } from './hero/heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroService } from './hero.service';
+import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
+import { HeroService } from './hero/hero.service';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './hero/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './loader/loader.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HeroCreateComponent } from './hero/hero-create/hero-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
-    LoaderComponent
+    LoaderComponent,
+    HeroCreateComponent
   ],
   imports: [
     BrowserModule,
